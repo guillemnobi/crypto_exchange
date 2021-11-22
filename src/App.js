@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
-import Coin from "./components/Coin";
+import CryptoTable from "./components/CryptoTable";
 
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=150&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d
 
@@ -25,14 +25,10 @@ function App() {
     setSearch(e.target.value);
   };
 
-  const filteredCoins = coins.filter((coin) =>
-    coin.name.toLowerCase().includes(search.toLowerCase())
-  );
-
   return (
     <div className="coin-app">
       <div className="coin-search">
-        <h1 className="coin-text">Search a currency// THIS IS A TEST</h1>
+        <h1 className="coin-text">Search a currency// THIS THE SECOND TEST</h1>
         <form>
           <input
             className="coin-input"
@@ -42,20 +38,8 @@ function App() {
           />
         </form>
       </div>
-      {filteredCoins.map((coin) => {
-        return (
-          <Coin
-            key={coin.id}
-            name={coin.name}
-            price={coin.current_price}
-            symbol={coin.symbol}
-            marketcap={coin.total_volume}
-            volume={coin.market_cap}
-            image={coin.image}
-            priceChange={coin.price_change_percentage_24h}
-          />
-        );
-      })}
+
+      <CryptoTable coins={coins} search={search} />
     </div>
   );
 }
