@@ -25,6 +25,16 @@
   align-content: center;
 }
 
+.coin-search p {
+  color: #61dafb;
+  font-weight: 700;
+  text-align: right;
+}
+
+.coin-search a {
+  text-decoration: none;
+}
+
 .coin-text {
   margin-bottom: 32px;
   text-align: center;
@@ -61,4 +71,28 @@
   color: #e2e2e2;
   font-size: 15px;
   font-weight: bold;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 5vh; /* Height of the footer */
+  background: #082634f0;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  align-items: center;
+  z-index: 999;
+}
+
+footer a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 1vh;
+}
+
+footer p {
+  color: white;
 }
