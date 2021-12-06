@@ -30,7 +30,7 @@ function App() {
     <>
       <div className="coin-app">
         <div className="coin-search">
-          <h1 className="coin-text">Wellcome To Crypto CoinList</h1>
+          <h1 className="coin-text">Wellcome To Crypto CoinList!</h1>
           <a href="https://reactjs.org/">
             <p>By REACT</p>
           </a>
